@@ -89,12 +89,11 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
-          ECR_REGISTRY: 612990440403.dkr.ecr.ap-south-1.amazonaws.com
-          ECR_REPOSITORY: amagiconnect-gateway-dev
+          ECR_REGISTRY: 512027893276.dkr.ecr.ap-south-1.amazonaws.com
+          ECR_REPOSITORY: demo-repo-a
           IMAGE_TAG: ${{ github.sha }}
           REGION: ap-south-1  
-          ECS_CLUSTER: amagiconnect-ecs-cluster-dev
-          SERVICE_NAME: amagiconnect-gateway
+
         
         run: |
           # Build a docker container and
